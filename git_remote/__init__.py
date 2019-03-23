@@ -45,7 +45,7 @@ def set_url(name, url):
 
 @public.add
 def remotes():
-    """return list of git remote tuples (name, url)"""
+    """return a list of git remote tuples (name, url)"""
     result = []
     for l in run(["-v"]).splitlines():
         name, url, role = l.split()
